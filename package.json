@@ -1,7 +1,7 @@
 {
-    "name": "bloodpoolgambling",
+    "name": "gambling-discord-bot",
     "version": "0.0.1",
-    "description": "SnowieVampire Discord BloodPool Gambling Bot",
+    "description": "Discord Gambling Bot",
     "keywords": [
         "Discord",
         "Bot"

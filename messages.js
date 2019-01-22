@@ -1,13 +1,13 @@
 module.exports = {
     current: (amount, author) => (
-        `${author} currently has ${amount} drops in their bloodpool.`
+        `${author} currently has ${amount} drops in their pool.`
     ),
 
     allWin: (author, current) => (
         `${author} gambled all their drops and won! They doubled their drops and now have ${current*1.5} drops in their pool!`
     ),
     allLose: (author) => (
-        `${author} gambled all their drops and lost. The disappointing vampie now has nothing left. Puny.`
+        `${author} gambled all their drops and lost. The disappointing gambler now has nothing left. Absolutely nothing.`
     ),
 
     leaderboard: (leaderboard, user) => {
@@ -48,7 +48,7 @@ module.exports = {
     ),
     help: (prefix) => ({
         title: "You called for some assistance?",
-        description: 'Below is a list of things to interact with.',
+        description: 'Below is a list of commands you can use.',
         fields: [
             {
                 name: 'Gambling',
@@ -70,15 +70,11 @@ module.exports = {
         ]
     }),
 
-    percentage: (subCommand) => (
-        `${subCommand} was the percentage and was permitted`
-    ),
-
     gambleSuccess: (author, amount, total) => (
-        `${author} gambles ${amount} drops and won! ${author} now has ${total} drops in their pool! Delicious...`
+        `${author} gambles ${amount} drops and won! ${author} now has ${total} drops in their pool!`
     ),
     gambleFail: (author, amount, total) => (
-        `${author} gambles ${amount} drops, but lost. ${author} now has just ${total} drops left. Pathetic...`
+        `${author} gambles ${amount} drops, but lost. ${author} now has just ${total} drops left.`
     ),
 
     fail: () => (
@@ -86,12 +82,12 @@ module.exports = {
     ),
 
     reset: (author) => (
-        `${author} has emptied their pool, and begged to start over. As I'm a merciful devil, this vamp now has 300 drops in their pool. No more weakness.`
+        `${author} has emptied their pool, and begged to start over. As I'm a merciful devil, I've granted you 300 drops. Try harder this time!`
     ),
     start: (author, prefix) => ({
         title: `Welcome, ${author}.`,
-        description:  `You're about to begin your vampire experience.
-        Compete against your fellow vamps and collect the most amount of blood droplets in your pool.
+        description:  `You're about to begin your gambling experience.
+        Compete against your friends and collect the most amount of droplets for your pool.
         To get started, type in ${prefix} help. I've granted you 300 drops to start off with.
         Best of luck, newbie.`
     }),
@@ -99,8 +95,8 @@ module.exports = {
         `Hey, you already started! To start over, use the ${prefix} reset command!`
     ),
 
-    outOfBlood: (author) => (
-        `${author} gambled and lost... and now ${author} is out of blood. Better that way, no one likes the weak. Bet you want to start over now, huh... Pathetic.`
+    out: (author) => (
+        `${author} gambled and lost... and now ${author} is out of drops. Use the command !reset to start over.`
     ),
 
     insufficient: () => (

@@ -80,7 +80,7 @@ client.on('message', msg => {
             msg.channel.send(messages.gambleFail(name, subCommand, total));
           } else {
             poolPut(msg.author.id, name, 0 );
-            msg.channel.send(messages.outOfBlood(name));
+            msg.channel.send(messages.out(name));
           }
         }
       }
@@ -102,7 +102,7 @@ client.on('message', msg => {
             msg.channel.send(messages.gambleFail(name, subCommand, drops));
           } else {
             poolPut(msg.author.id, name, 0);
-            msg.channel.send(messages.outOfBlood(name));
+            msg.channel.send(messages.out(name));
           }
         }
       }
