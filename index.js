@@ -171,12 +171,6 @@ client.on('message', msg => {
       }
       msg.author.send(messages.prefixFail());
       break;
-    
-    case subCommand === "LoveForMel":
-      if(msg.author.id === '134037941893857280'){
-        msg.channel.send(`${name} gambles 'the amount he loves mel' and won! ${name} now has 1000000000000000000000000000000000000000000000000000000000000000 drops in their pool! Delicious...`);
-      }
-      break;
 
     // Change Bot Name
     case subCommand === "setBotname":
